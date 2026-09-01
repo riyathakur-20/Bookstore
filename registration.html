@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GL Bajaj Online Bookstore - Catalogue</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #f4b183;
+            padding: 15px;
+            border: 1px solid black;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4b183;
+        }
+
+        .menu {
+            background-color: #fde9d9;
+        }
+
+        .book {
+            width: 100px;
+            height: 130px;
+        }
+
+        .cart {
+            background-color: #f4b183;
+            border: 1px solid black;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        .cart:hover {
+            background-color: #e69138;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>GL Bajaj Online Bookstore</h1>
+
+    <table>
+
+        <tr>
+            <th colspan="5">ONLINE BOOKSTORE</th>
+        </tr>
+
+        <tr class="menu">
+            <td><a href="exp1.html" target="_blank">Home</a></td>
+            <td><a href="exp2.html" target="_blank">Login</a></td>
+            <td><a href="exp5.html" target="_blank">Registration</a></td>
+            <td><a href="exp3.html" target="_blank">Catalogue</a></td>
+            <td><a href="exp4.html" target="_blank">Cart</a></td>
+        </tr>
+
+        <tr>
+            <th>Book Cover</th>
+            <th>Book Details</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>
+                <img class="book"
+                     src="https://covers.openlibrary.org/b/isbn/9780596004661-M.jpg"
+                     alt="XML Bible">
+            </td>
+
+            <td>
+                <b>XML Bible</b><br>
+                Publication: Wiley
+            </td>
+
+            <td>Winston</td>
+
+            <td>$40.5</td>
+
+            <td>
+                <button class="cart">Add to Cart</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img class="book"
+                     src="https://covers.openlibrary.org/b/isbn/9780131480056-M.jpg"
+                     alt="AI">
+            </td>
+
+            <td>
+                <b>Artificial Intelligence</b><br>
+                Publication: Prentice Hall
+            </td>
+
+            <td>S. Russell</td>
+
+            <td>$63</td>
+
+            <td>
+                <button class="cart">Add to Cart</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img class="book"
+                     src="https://covers.openlibrary.org/b/isbn/9780132222204-M.jpg"
+                     alt="Java 2">
+            </td>
+
+            <td>
+                <b>Java 2</b><br>
+                Publication: BPB Publications
+            </td>
+
+            <td>Watson</td>
+
+            <td>$35.5</td>
+
+            <td>
+                <button class="cart">Add to Cart</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img class="book"
+                     src="https://covers.openlibrary.org/b/isbn/9780764557597-M.jpg"
+                     alt="HTML in 24 Hours">
+            </td>
+
+            <td>
+                <b>HTML in 24 Hours</b><br>
+                Publication: Sams Publication
+            </td>
+
+            <td>Sam Peter</td>
+
+            <td>$50</td>
+
+            <td>
+                <button class="cart">Add to Cart</button>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

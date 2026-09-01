@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 30px;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .heading {
+            background-color: #f4bd8a;
+            font-weight: bold;
+        }
+
+        .menu {
+            background-color: #fde5d2;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>GL Bajaj Online Book Store</h1>
+
+    <table>
+
+        <!-- Top row -->
+        <tr class="heading">
+            <th>Logo</th>
+            <th colspan="4">Web Site Name</th>
+        </tr>
+
+        <!-- Menu row -->
+        <tr class="menu">
+            <td>Home</td>
+            <td>Login</td>
+            <td>Registration</td>
+            <td>Catalogue</td>
+            <td>Cart</td>
+        </tr>
+
+        <!-- Books -->
+        <tr>
+            <td rowspan="4">
+                CSE<br><br>
+                ECE<br><br>
+                EEE<br><br>
+                CIVIL
+            </td>
+
+            <th>Book name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+        </tr>
+
+        <tr>
+            <td>Java 2</td>
+            <td>$35.5</td>
+            <td>2</td>
+            <td>$70</td>
+        </tr>
+
+        <tr>
+            <td>XML Bible</td>
+            <td>$40.5</td>
+            <td>1</td>
+            <td>$40.5</td>
+        </tr>
+
+        <tr>
+            <td colspan="3"><b>Total amount</b></td>
+            <td><b>$110.5</b></td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

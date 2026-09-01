@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GL Bajaj Online Bookstore</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        /* MAIN BORDER */
+        .main-container {
+            width: 100%;
+            min-height: 100vh;
+            border: 2px solid black;
+        }
+
+        /* TOP COLLEGE NAME */
+        .college-name {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: white;
+
+            border-bottom: 1px solid black;
+
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* LOGO + BOOKSTORE AREA */
+        .bookstore-header {
+            height: 77px;
+
+            display: grid;
+            grid-template-columns: 20% 80%;
+
+            background-color: #fc8647;
+
+            border-bottom: 1px solid black;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+        .bookstore-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* NAVIGATION */
+        .navigation {
+            height: 47px;
+
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+
+            background-color: #f9ead5;
+
+            border-bottom: 1px solid black;
+        }
+
+        .navigation a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: black;
+            text-decoration: none;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            border-right: 1px solid #999;
+
+            cursor: pointer;
+        }
+
+        .navigation a:last-child {
+            border-right: none;
+        }
+
+        .navigation a:hover {
+            background-color: #ead5bd;
+        }
+
+        /* MAIN BODY */
+        .body-area {
+            display: grid;
+            grid-template-columns: 20% 80%;
+
+            min-height: 428px;
+        }
+
+        /* LEFT SIDE */
+        .left-panel {
+            background-color: #f9ead5;
+
+            border-right: 2px solid black;
+        }
+
+        .branch-link {
+            height: 56px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-bottom: 1px solid #aaa;
+
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .branch-link a {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* RIGHT SIDE */
+        .right-panel {
+            background-color: white;
+
+            position: relative;
+
+            overflow: auto;
+        }
+
+        /* HOME */
+        .home-content {
+            height: 428px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* PAGE IFRAME */
+
+        #contentFrame {
+            width: 100%;
+            height: 100%;
+
+            min-height: 428px;
+
+            border: none;
+
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <!-- COLLEGE NAME -->
+    <div class="college-name">
+        GL Bajaj Institute of Technology and Management
+    </div>
+
+
+    <!-- LOGO + ONLINE BOOKSTORE -->
+    <div class="bookstore-header">
+
+        <div class="logo">
+            <img src="data:image/jpeg;base64,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" alt="GL Bajaj Logo">
+        </div>
+
+        <div class="bookstore-title">
+            ONLINE BOOKSTORE
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <div class="navigation">
+
+        <a href="#" onclick="showHome(); return false;">
+            Home
+        </a>
+
+        <a href="login.html" onclick="openPage('login.html'); return false;">
+            Login
+        </a>
+
+        <a href="registration.html" onclick="openPage('registration.html'); return false;">
+            Registration
+        </a>
+
+        <a href="catalogue.html" onclick="openPage('catalogue.html'); return false;">
+            Catalogue
+        </a>
+
+        <a href="cart.html" onclick="openPage('cart.html'); return false;">
+            Cart
+        </a>
+
+    </div>
+
+
+    <!-- BODY -->
+    <div class="body-area">
+
+
+        <!-- LEFT PANEL -->
+        <div class="left-panel">
+
+            <div class="branch-link">
+                <a href="#" onclick="blankPage(); return false;">
+                    CSE
+                </a>
+            </div>
+
+            <div class="branch-link">
+                <a href="#" onclick="blankPage(); return false;">
+                    ECE
+                </a>
+            </div>
+
+            <div class="branch-link">
+                <a href="#" onclick="blankPage(); return false;">
+                    EEE
+                </a>
+            </div>
+
+            <div class="branch-link">
+                <a href="#" onclick="blankPage(); return false;">
+                    CIVIL
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT PANEL -->
+        <div class="right-panel" id="rightPanel">
+
+
+            <!-- HOME CONTENT -->
+            <div id="homeContent" class="home-content">
+
+                Description of the WebSite
+
+            </div>
+
+
+            <!-- OTHER PAGES LOAD HERE -->
+            <iframe
+                id="contentFrame"
+                name="contentFrame">
+            </iframe>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    /* OPEN LOGIN / REGISTRATION / CATALOGUE / CART */
+
+    function openPage(page) {
+
+        document.getElementById("homeContent").style.display = "none";
+
+        const frame = document.getElementById("contentFrame");
+
+        frame.style.display = "block";
+
+        frame.src = page;
+    }
+
+
+    /* HOME */
+
+    function showHome() {
+
+        const frame = document.getElementById("contentFrame");
+
+        frame.style.display = "none";
+
+        frame.src = "";
+
+        document.getElementById("homeContent").style.display = "flex";
+    }
+
+
+    /* CSE / ECE / EEE / CIVIL */
+
+    function blankPage() {
+
+        const frame = document.getElementById("contentFrame");
+
+        frame.style.display = "none";
+
+        frame.src = "";
+
+        document.getElementById("homeContent").style.display = "none";
+    }
+
+</script>
+
+</body>
+</html>
